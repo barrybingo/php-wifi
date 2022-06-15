@@ -31,7 +31,7 @@
     },
     "require": {
         "php": "^7.2.8",
-        "illuminate/support": "^8.83"
+        "illuminate/support": "^7.0"
     },
     "require-dev": {
         "splitbrain/php-cli": "^1.1",
