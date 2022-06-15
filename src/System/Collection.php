@@ -2,8 +2,9 @@
 
 namespace Sanchescom\WiFi\System;
 
+use Illuminate\Support\Collection as BaseCollection;
+use Illuminate\Support\ItemNotFoundException;
 use Sanchescom\WiFi\Exceptions\NetworkNotFoundException;
-use Tightenco\Collect\Support\Collection as BaseCollection;
 
 /**
  * Class Collection.
@@ -47,16 +48,15 @@ class Collection extends BaseCollection
     }
 
     /**
-     * @throws \Sanchescom\WiFi\Exceptions\NetworkNotFoundException
-     *
      * @return \Sanchescom\WiFi\System\AbstractNetwork
+     * @throws \Sanchescom\WiFi\Exceptions\NetworkNotFoundException
      */
-    public function firstOrFail()
+    public function firstOrFail($key = null, $operator = null, $value = null)
     {
-        if ($this->isEmpty()) {
+        try {
+            return parent::firstOrFail(...func_get_args());
+        } catch (ItemNotFoundException $e) {
             throw new NetworkNotFoundException();
         }
-
-        return $this->first();
     }
 }
