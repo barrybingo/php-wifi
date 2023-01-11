@@ -15,12 +15,12 @@ class Network extends AbstractNetwork
     protected const POSITIVE_CONNECTION_FLAG = 'yes';
 
     /**
-     * @param string $password
      * @param string $device
+     * @param ?string $password
      *
      * @throws \Exception
      */
-    public function connect(string $password, string $device): void
+    public function connect(string $device, ?string $password=null): void
     {
         $format = 'LANG=C nmcli -w 10 device wifi connect "%s" password "%s" ifname "%s"';
 

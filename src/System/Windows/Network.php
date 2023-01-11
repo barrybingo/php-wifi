@@ -16,12 +16,12 @@ class Network extends AbstractNetwork implements FrequencyInterface
     use Frequency;
 
     /**
-     * @param string $password
      * @param string $device
+     * @param ?string $password
      *
      * @throws \Exception
      */
-    public function connect(string $password, string $device): void
+    public function connect(string $device, ?string $password=null): void
     {
         $command = glue_commands(
             sprintf('netsh wlan add profile filename="%s"', $this->getProfileService()->create($password)),
