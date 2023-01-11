@@ -10,10 +10,10 @@ use Sanchescom\WiFi\System\AbstractNetwork;
 interface NetworkInterface
 {
     /**
-     * @param string $password
      * @param string $device
+     * @param ?string $password
      */
-    public function connect(string $password, string $device): void;
+    public function connect(string $device, ?string $password=null): void;
 
     /**
      * @param string $device

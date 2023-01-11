@@ -138,7 +138,7 @@ class NetworksTest extends BaseTestCase
     {
         $network = $networks->firstOrFail();
 
-        $network->connect('123', 'someDevice');
+        $network->connect('someDevice', '123');
 
         $this->assertEquals(
             $network->getCommand()->getLastCommand(),
@@ -174,7 +174,7 @@ class NetworksTest extends BaseTestCase
     {
         $network = $networks->firstOrFail();
 
-        $network->connect('123', 'someDevice');
+        $network->connect('someDevice', '123');
 
         $this->assertEquals(
             $network->getCommand()->getLastCommand(),
@@ -211,7 +211,7 @@ class NetworksTest extends BaseTestCase
     {
         $network = $networks->firstOrFail();
 
-        $network->connect('123', 'someDevice');
+        $network->connect('someDevice', '123');
 
         $windowsPath = 'src'.DIRECTORY_SEPARATOR.'System'.DIRECTORY_SEPARATOR.'Windows';
 

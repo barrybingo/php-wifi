@@ -107,8 +107,8 @@ class WiFi extends CLI
                     \Sanchescom\WiFi\WiFi::scan()
                         ->getByBssid($options->getOpt('bssid'))
                         ->connect(
-                                $options->getOpt('password'),
-                                $options->getOpt('device')
+                                $options->getOpt('device'),
+                                $options->getOpt('password')
                         );
                 } catch (Exception $exception) {
                     $this->error($exception->getMessage());
