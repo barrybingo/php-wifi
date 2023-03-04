@@ -30,8 +30,8 @@
         "fix-style": "./vendor/bin/phpcbf --standard=PSR2 ./src"
     },
     "require": {
-        "php": "^7.2.8|^8",
-        "illuminate/support": "^8.0|^9.0"
+        "php": "^7.2.8|^8.0",
+        "illuminate/support": "^8.0|^9.0|^10.0"
     },
     "require-dev": {
         "splitbrain/php-cli": "^1.1",
