@@ -30,13 +30,13 @@
         "fix-style": "./vendor/bin/phpcbf --standard=PSR2 ./src"
     },
     "require": {
-        "php": "^7.2.8|^8.0",
+        "php": "^7.2.8|^8",
         "illuminate/support": "^8.0|^9.0"
     },
     "require-dev": {
         "splitbrain/php-cli": "^1.1",
         "phplucidframe/console-table": "^1.2",
-        "phpunit/phpunit": "^8.0",
+        "phpunit/phpunit": "^9.0",
         "mockery/mockery": "^1.2",
         "squizlabs/php_codesniffer": "^3.4",
         "phpstan/phpstan": "^1.8"
